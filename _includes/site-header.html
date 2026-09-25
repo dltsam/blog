@@ -1,0 +1,21 @@
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="{{ '/' | relative_url }}" aria-label="{{ site.title }} 首页">
+      <span class="brand-mark" aria-hidden="true"><span></span></span>
+      <span class="brand-copy">
+        <strong>{{ site.title }}</strong>
+        <small>NOTES FROM EVERYDAY</small>
+      </span>
+    </a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-navigation">
+      <span class="menu-toggle-label">菜单</span>
+      <span class="menu-icon" aria-hidden="true"><i></i><i></i></span>
+    </button>
+    <nav class="site-nav" id="site-navigation" aria-label="主导航">
+      <a href="{{ '/' | relative_url }}">首页</a>
+      <a href="{{ '/archive/' | relative_url }}">文章归档</a>
+      <a href="{{ '/about/' | relative_url }}">关于</a>
+      <a class="nav-rss" href="{{ '/feed.xml' | relative_url }}">RSS <span aria-hidden="true">↗</span></a>
+    </nav>
+  </div>
+</header>
