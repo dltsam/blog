@@ -1,7 +1,7 @@
 title: 纸边集
 description: 把日常里值得记住的事，慢慢写下来。
 url: https://dltsam.github.io
-baseurl: ""
+baseurl: "/blog"
 lang: zh-CN
 timezone: Asia/Shanghai
 permalink: /journal/:year/:month/:day/:title/

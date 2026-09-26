@@ -8,11 +8,11 @@
 - 文章归档：按年份浏览，支持标题、摘要和主题搜索
 - 关于：可替换的示例作者介绍
 - 每篇文章：独立阅读页
-- RSS：/feed.xml
+- RSS：https://dltsam.github.io/blog/feed.xml
 
 ## 发布到 GitHub Pages
 
-仓库名使用 dltsam.github.io。进入仓库 Settings → Pages，在 Build and deployment 中选择 Deploy from a branch，分支选择 main，目录选择 /(root)，保存后访问 https://dltsam.github.io。
+仓库名使用 blog。进入仓库 Settings → Pages，在 Build and deployment 中选择 Deploy from a branch，分支选择 main，目录选择 /(root)，保存后访问 https://dltsam.github.io/blog/。
 
 GitHub Pages 站点是公开网页。发布前请替换示例作者介绍和示例邮箱。
 
