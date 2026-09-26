@@ -1,30 +1,28 @@
 ---
 layout: default
 title: 首页
-description: 把日常里值得记住的事，慢慢写下来。
+description: GIS、前端工程与问题复盘。把地图、数据和界面之间的细节写清楚。
 ---
 <div class="page-wrap home-page">
   <section class="intro-grid" aria-labelledby="home-title">
     <div class="intro-copy">
-      <p class="eyebrow"><span class="eyebrow-mark" aria-hidden="true"></span>个人博客 · DEMO</p>
-      <h1 id="home-title">把日常里<br>值得记住的事，<em>写下来。</em></h1>
-      <p class="intro-lede">读过的书，走过的路，还有那些转瞬即逝的小念头。这里是一间慢慢更新的文字小屋。</p>
-      <a class="text-link" href="#latest">从最近的文章开始 <span aria-hidden="true">↘</span></a>
+      <p class="eyebrow"><span class="eyebrow-mark" aria-hidden="true"></span>GIS · 前端工程 · 问题复盘</p>
+      <h1 id="home-title">地图之外，<br>还有许多<em>边界。</em></h1>
+      <p class="intro-lede">从空间数据到浏览器界面，从一处弹窗偏位到一次部署验证。这里记录问题的来路、修复的取舍，以及真正能说明结果的证据。</p>
+      <a class="text-link" href="#latest">阅读最近的笔记 <span aria-hidden="true">↘</span></a>
     </div>
     <aside class="paper-note" aria-label="博客短笺">
-      <div class="note-topline"><span>FIELD NOTE</span><span>NO. 001</span></div>
+      <div class="note-topline"><span>FIELD NOTE</span><span>MAP / DATA / UI</span></div>
       <div class="note-illustration" aria-hidden="true">
         <svg viewBox="0 0 160 124" role="presentation">
-          <path d="M31 24h84l18 18v62H31z" fill="none" stroke="currentColor" stroke-width="1.5"/>
-          <path d="M115 24v19h18M47 57h68M47 70h54M47 83h61" fill="none" stroke="currentColor" stroke-width="1.5"/>
-          <path d="M26 18v74" fill="none" stroke="#3548b8" stroke-width="4"/>
-          <path d="M26 18h25l-12 13 12 13H26" fill="#d8e568"/>
-          <circle cx="118" cy="91" r="17" fill="#3548b8"/>
-          <path d="M111 91h14M118 84v14" stroke="#f2f5f2" stroke-width="1.5"/>
+          <path d="M25 20 61 10l37 13 37-10v78l-37 10-37-13-36 10z" fill="none" stroke="currentColor" stroke-width="1.5"/>
+          <path d="M61 10v78M98 23v78M39 63c20-30 31-4 48-14s30-15 38-6" fill="none" stroke="#3548b8" stroke-width="2"/>
+          <circle cx="88" cy="49" r="5" fill="#d8e568" stroke="currentColor" stroke-width="1.5"/>
+          <path d="M20 105h118" stroke="currentColor" stroke-width="1"/>
         </svg>
       </div>
-      <p class="note-quote">让想法<br>有地方安放。</p>
-      <p class="note-caption">一页一页，慢慢来。</p>
+      <p class="note-quote">把问题<br>画出边界。</p>
+      <p class="note-caption">观察 · 定位 · 验证</p>
     </aside>
   </section>
 
@@ -32,13 +30,13 @@ description: 把日常里值得记住的事，慢慢写下来。
   {% if featured_post %}
   <section class="featured-section" aria-labelledby="featured-title">
     <div class="section-label">
-      <span class="section-index">置顶阅读</span>
+      <span class="section-index">最新一篇</span>
       <span class="section-rule" aria-hidden="true"></span>
-      <span class="section-aside">从这一页开始</span>
+      <span class="section-aside">从最新的问题读起</span>
     </div>
     <a class="featured-story" href="{{ featured_post.url | relative_url }}">
       <div class="featured-copy">
-        <p class="story-category">{{ featured_post.categories.first | default: "随笔" }}</p>
+        <p class="story-category">{{ featured_post.categories.first | default: "笔记" }}</p>
         <h2 id="featured-title">{{ featured_post.title | escape }}</h2>
         <p>{{ featured_post.excerpt | strip_html | escape }}</p>
         <span class="story-read">阅读全文 <span aria-hidden="true">↗</span></span>
@@ -56,7 +54,7 @@ description: 把日常里值得记住的事，慢慢写下来。
       <div class="section-heading">
         <div>
           <p class="eyebrow"><span class="eyebrow-mark" aria-hidden="true"></span>最近写下</p>
-          <h2 id="latest-title">文章与片段</h2>
+          <h2 id="latest-title">技术笔记</h2>
         </div>
         <a class="quiet-link" href="{{ '/archive/' | relative_url }}">全部文章 <span aria-hidden="true">↗</span></a>
       </div>
@@ -64,7 +62,7 @@ description: 把日常里值得记住的事，慢慢写下来。
         <label class="search-box">
           <span class="sr-only">搜索文章</span>
           <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="8.5" cy="8.5" r="5.5"/><path d="m13 13 4 4"/></svg>
-          <input type="search" data-post-search placeholder="搜一篇文章" autocomplete="off">
+          <input type="search" data-post-search placeholder="搜索一篇笔记" autocomplete="off">
         </label>
         <button class="search-clear" type="button" data-search-clear disabled>清除</button>
       </div>
@@ -77,29 +75,28 @@ description: 把日常里值得记住的事，慢慢写下来。
             <h3><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h3>
             <p>{{ post.excerpt | strip_html | escape }}</p>
           </div>
-          <span class="post-category">{{ post.categories.first | default: "随笔" }}</span>
+          <span class="post-category">{{ post.categories.first | default: "笔记" }}</span>
         </article>
         {% endfor %}
-        <p class="empty-search" data-search-empty hidden>没有找到匹配的文章，换个关键词试试。</p>
+        <p class="empty-search" data-search-empty hidden>没有找到匹配的笔记，换个关键词试试。</p>
       </div>
     </section>
 
     <aside class="home-aside">
       <section class="about-note" aria-labelledby="about-note-title">
-        <p class="eyebrow">关于这本小册</p>
-        <h2 id="about-note-title">你好，<br>欢迎来坐坐。</h2>
-        <p>这是一个个人博客的示例。你可以在这里介绍自己、写作主题，以及为什么开始记录。</p>
-        <a class="text-link" href="{{ '/about/' | relative_url }}">读一读关于本站 <span aria-hidden="true">↗</span></a>
+        <p class="eyebrow">关于这里</p>
+        <h2 id="about-note-title">记录问题，<br>也记录证据。</h2>
+        <p>关注 GIS、空间数据和前端工程。文章尽量从一个具体问题出发，写清判断过程与验证边界。</p>
+        <a class="text-link" href="{{ '/about/' | relative_url }}">了解这个博客 <span aria-hidden="true">↗</span></a>
       </section>
       <section class="topic-note" aria-labelledby="topic-title">
-        <p class="eyebrow" id="topic-title">常写的话题</p>
+        <p class="eyebrow" id="topic-title">文章主题</p>
         <ul class="topic-list">
           {% for category in site.categories %}
           <li><span>{{ category[0] }}</span><span>{{ category[1].size | prepend: "0" | slice: -2, 2 }}</span></li>
           {% endfor %}
         </ul>
       </section>
-      <p class="demo-caption"><span aria-hidden="true">✳</span> 示例文章与介绍均可替换</p>
     </aside>
   </div>
 </div>

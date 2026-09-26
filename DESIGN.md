@@ -25,16 +25,16 @@ rounded:
   control: "3px"
 omitted:
   - section: components
-    reason: "This static blog demo uses semantic HTML and page-specific editorial styles."
+    reason: "This static blog uses semantic HTML and page-specific editorial styles."
   - section: elevation
     reason: "Flat paper surfaces and rules carry hierarchy without shadows."
 ---
 
 ## Overview
 
-**North Star:** a contemporary writer's field notebook, organized with the quiet precision of a small reading-room catalogue. The audience is a reader arriving for a thoughtful, unhurried personal blog. This is a content-first brand surface, not an application dashboard.
+**North Star:** a field notebook for GIS, spatial data, and frontend engineering. Readers should be able to find a concrete problem, understand the reasoning, and see the boundary of its verification. This is a content-first technical blog, not an application dashboard.
 
-**Signature:** a pale ruled-paper note with one chartreuse tab and a deep-blue index mark. Use this motif in the home introduction and small navigation details; keep article pages calm.
+**Signature:** a pale ruled-paper note with a small map sketch, one chartreuse point, and a deep-blue route. Use this motif in the home introduction; keep article pages calm.
 
 **References:** learn from the text-first article discovery and tag/search patterns in [Chirpy](https://chirpy.cotes.page/) and the responsive navigation/content hierarchy in [Minimal Mistakes](https://mmistakes.github.io/minimal-mistakes/). Keep the final layout lighter and more typographic than either theme.
 
@@ -50,7 +50,7 @@ Use a CJK-capable system sans for body copy and a system serif stack for large e
 
 ## Layout
 
-The home page uses a wide editorial introduction above a two-column article-and-notes layout. Long-form articles use one centered, narrow reading column. At phone widths, stack the columns, preserve generous line-height, and keep all navigation available.
+The home page uses a wide introduction above a two-column article-and-notes layout. The first screen states the GIS/frontend subject clearly. Long-form articles use one centered, narrow reading column with readable code and scrollable tables. At phone widths, stack the columns, preserve generous line-height, and keep all navigation available.
 
 ## Elevation & Depth
 
@@ -67,6 +67,6 @@ Links remain visibly underlined or use the blue index color. Buttons use a plain
 ## Do's and Don'ts
 
 - Keep the blog title, article title, and date hierarchy clear.
-- Use the sample author copy as editable demo content.
+- Use only public-safe, source-grounded technical examples. Do not invent private biographical details or publish internal system names, addresses, or credentials.
 - Keep motion limited to short color transitions; respect reduced-motion settings.
 - Do not add image dependencies or tracking scripts to the starter.

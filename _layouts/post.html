@@ -4,10 +4,10 @@ layout: default
 <article class="article-page">
   <div class="article-topline">
     <a class="back-link" href="{{ '/archive/' | relative_url }}">← 返回文章归档</a>
-    <span class="article-index">纸边集 · 随笔</span>
+    <span class="article-index">纸边集 · 技术笔记</span>
   </div>
   <header class="article-header">
-    <p class="eyebrow"><span class="eyebrow-mark" aria-hidden="true"></span>{{ page.categories | join: " / " | default: "随笔" }}</p>
+    <p class="eyebrow"><span class="eyebrow-mark" aria-hidden="true"></span>{{ page.categories | join: " / " | default: "笔记" }}</p>
     <h1>{{ page.title | escape }}</h1>
     {% if page.excerpt %}<p class="article-deck">{{ page.excerpt | strip_html | escape }}</p>{% endif %}
     <div class="post-meta">
@@ -20,7 +20,7 @@ layout: default
   </div>
   <footer class="article-end">
     <span class="end-mark" aria-hidden="true">✳</span>
-    <p>这一页先写到这里。</p>
+    <p>问题记下来，下一次就有线索。</p>
     <a href="{{ '/archive/' | relative_url }}">继续翻阅文章 <span aria-hidden="true">↗</span></a>
   </footer>
 </article>

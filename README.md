@@ -1,38 +1,41 @@
-# 纸边集 · 个人博客 Demo
+# 纸边集
 
-一个基于 Jekyll 和 GitHub Pages 的中文博客起始站。文章使用 Markdown 编写，提交到 main 分支后由 GitHub Pages 自动构建和发布。
+一个基于 Jekyll 与 GitHub Pages 的中文技术博客，记录 GIS、空间数据、前端工程和问题复盘。文章放在 `_posts/`，以 Markdown 维护。
 
 ## 页面
 
-- 首页：博客介绍、置顶文章、最近文章和本地搜索
-- 文章归档：按年份浏览，支持标题、摘要和主题搜索
-- 关于：可替换的示例作者介绍
-- 每篇文章：独立阅读页
-- RSS：https://dltsam.github.io/blog/feed.xml
+- 首页：最新文章、文章列表和本地搜索
+- [文章归档](https://dltsam.github.io/blog/archive/)：按年份浏览、搜索标题与主题
+- [关于](https://dltsam.github.io/blog/about/)：写作方向与联系方式
+- [RSS](https://dltsam.github.io/blog/feed.xml)：订阅更新
 
-## 发布到 GitHub Pages
+## 写文章
 
-仓库名使用 blog。进入仓库 Settings → Pages，在 Build and deployment 中选择 Deploy from a branch，分支选择 main，目录选择 /(root)，保存后访问 https://dltsam.github.io/blog/。
+在 `_posts/` 新建 `YYYY-MM-DD-short-title.md`，例如：
 
-GitHub Pages 站点是公开网页。发布前请替换示例作者介绍和示例邮箱。
+```yaml
+---
+title: 文章标题
+date: 2026-09-26 10:00:00 +0800
+categories: [前端工程]
+excerpt: 一句话说明文章讨论的问题。
+reading_time: 5
+---
+```
 
-## 写新文章
-
-在 _posts 目录新建 YYYY-MM-DD-short-title.md，文件开头加入 YAML 信息：
-
-    ---
-    title: 文章标题
-    date: 2026-09-25 10:00:00 +0800
-    categories: [随笔]
-    excerpt: 一句话摘要。
-    ---
-
-后面直接写 Markdown 正文。文章时间按 Asia/Shanghai 展示。
+正文使用 Markdown。写实际案例时，请去除单位名称、内部地址、账号凭据和不适合公开的源数据；示例数据需明确为示意。
 
 ## 本地预览
 
-安装 Ruby 与 Bundler 后，在项目目录运行 bundle install，再运行 bundle exec jekyll serve。终端会显示本地预览地址。
+使用与 GitHub Pages 的 Jekyll 3 兼容的 Ruby 环境，安装 Bundler 后运行：
 
-## 改成自己的博客
+```sh
+bundle install
+bundle exec jekyll serve
+```
 
-先改 _config.yml 里的标题、简介和站点 URL，再替换 about.md 中的示例介绍、删除或改写 _posts 中的示例文章。域名可先使用 github.io 地址，之后再绑定自定义域名。
+打开终端显示的本地地址。部署前可运行 `bundle exec jekyll build`，检查生成的 `_site/`。
+
+## 发布
+
+仓库使用 `main` 分支的根目录作为 GitHub Pages 来源。GitHub Pages 配置位于仓库的 Settings → Pages；站点地址为 <https://dltsam.github.io/blog/>。站点内容公开，提交前请检查文章与“关于”页。

@@ -1,20 +1,20 @@
 ---
 layout: default
 title: 文章归档
-description: 按时间翻阅纸边集里写下的文章。
+description: 按时间查找 GIS、前端工程与问题复盘笔记。
 permalink: /archive/
 ---
 <div class="page-wrap archive-page">
   <header class="page-heading">
     <p class="eyebrow"><span class="eyebrow-mark" aria-hidden="true"></span>文章索引 · {{ site.posts.size }} 篇</p>
-    <h1>慢慢翻，<em>总会遇见。</em></h1>
-    <p>所有文章都从这里开始，也都可以从这里重新读起。</p>
+    <h1>问题留下，<em>线索可查。</em></h1>
+    <p>地图、数据和前端工程中的问题，按写下的时间归档。</p>
   </header>
   <div class="search-row archive-search">
     <label class="search-box">
       <span class="sr-only">搜索文章归档</span>
       <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="8.5" cy="8.5" r="5.5"/><path d="m13 13 4 4"/></svg>
-      <input type="search" data-post-search placeholder="按标题或主题搜索" autocomplete="off">
+      <input type="search" data-post-search placeholder="搜索标题、摘要或主题" autocomplete="off">
     </label>
     <button class="search-clear" type="button" data-search-clear disabled>清除</button>
   </div>
@@ -32,12 +32,12 @@ permalink: /archive/
             <h3><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h3>
             <p>{{ post.excerpt | strip_html | escape }}</p>
           </div>
-          <span class="post-category">{{ post.categories.first | default: "随笔" }}</span>
+          <span class="post-category">{{ post.categories.first | default: "笔记" }}</span>
         </article>
         {% endfor %}
       </div>
     </section>
     {% endfor %}
-    <p class="empty-search" data-search-empty hidden>没有找到匹配的文章，换个关键词试试。</p>
+    <p class="empty-search" data-search-empty hidden>没有找到匹配的笔记，换个关键词试试。</p>
   </div>
 </div>

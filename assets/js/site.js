@@ -28,6 +28,7 @@
     var clearButton = scope.querySelector("[data-search-clear]");
     var status = scope.querySelector("[data-search-status]");
     var emptyState = scope.querySelector("[data-search-empty]");
+    var years = Array.prototype.slice.call(scope.querySelectorAll(".archive-year"));
 
     function updateResults() {
       var query = input.value.trim().toLocaleLowerCase();
@@ -38,6 +39,10 @@
         var matches = !query || content.indexOf(query) !== -1;
         item.hidden = !matches;
         if (matches) visibleCount += 1;
+      });
+
+      years.forEach(function (year) {
+        year.hidden = !year.querySelector("[data-search-item]:not([hidden])");
       });
 
       if (clearButton) clearButton.disabled = query.length === 0;
